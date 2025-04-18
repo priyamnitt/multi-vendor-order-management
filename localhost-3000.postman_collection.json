@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "aeeab204-cf04-4335-ba08-fc893c68e9a9",
+		"name": "localhost:3000",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42920119"
+	},
+	"item": [
+		{
+			"name": "/api/analytics/vendor/low-stock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlmMDc2MjhmLTIyODUtNDQ0OC04NjZkLTg2OWFkYzlkNjgyZSIsImVtYWlsIjoidmVuZG9yQGV4YW1wbGUuY29tIiwicm9sZSI6IlZFTkRPUiIsImlhdCI6MTc0NDk1OTAxMSwiZXhwIjoxNzQ1NTYzODExfQ.nZzi7TBUqW-erUJFH3x5Xc_fbnr0W4QaTDq75dJIDF4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"vendor@example.com\",\n  \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/analytics/vendor/low-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analytics",
+						"vendor",
+						"low-stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/analytics/vendor/daily-sales",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlmMDc2MjhmLTIyODUtNDQ0OC04NjZkLTg2OWFkYzlkNjgyZSIsImVtYWlsIjoidmVuZG9yQGV4YW1wbGUuY29tIiwicm9sZSI6IlZFTkRPUiIsImlhdCI6MTc0NDk1OTAxMSwiZXhwIjoxNzQ1NTYzODExfQ.nZzi7TBUqW-erUJFH3x5Xc_fbnr0W4QaTDq75dJIDF4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"vendor@example.com\",\n  \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/analytics/vendor/daily-sales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analytics",
+						"vendor",
+						"daily-sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"vendor@example.com\",\n  \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/analytics/admin/average-order-value",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2NGIxOTU3LTc4NGYtNDJhNy05ZjkxLWY0NTUxYzFjYjY0OCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDQ5NTg4NzksImV4cCI6MTc0NTU2MzY3OX0.PfoVAiDEv4Y68r5AbN85xOMGzJ72I7SXJSADqEUFq54",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/analytics/admin/average-order-value",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analytics",
+						"admin",
+						"average-order-value"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/analytics/admin/top-products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2NGIxOTU3LTc4NGYtNDJhNy05ZjkxLWY0NTUxYzFjYjY0OCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDQ5NTg4NzksImV4cCI6MTc0NTU2MzY3OX0.PfoVAiDEv4Y68r5AbN85xOMGzJ72I7SXJSADqEUFq54",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/analytics/admin/top-products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analytics",
+						"admin",
+						"top-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/analytics/admin/vendor-revenue",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2NGIxOTU3LTc4NGYtNDJhNy05ZjkxLWY0NTUxYzFjYjY0OCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDQ5NTg4NzksImV4cCI6MTc0NTU2MzY3OX0.PfoVAiDEv4Y68r5AbN85xOMGzJ72I7SXJSADqEUFq54",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/analytics/admin/vendor-revenue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analytics",
+						"admin",
+						"vendor-revenue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/orders/vendor/{{vendor_order_id}}/status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlmMDc2MjhmLTIyODUtNDQ0OC04NjZkLTg2OWFkYzlkNjgyZSIsImVtYWlsIjoidmVuZG9yQGV4YW1wbGUuY29tIiwicm9sZSI6IlZFTkRPUiIsImlhdCI6MTc0NDk1ODcwMSwiZXhwIjoxNzQ1NTYzNTAxfQ.0q3RfwNc0YDW7y67vQkgAkqTrMzVVYxIpLpwvWffuuU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": \"processing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/orders/vendor/{{vendor_order_id}}/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"vendor",
+						"{{vendor_order_id}}",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/orders/customer/my-orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUyZDE4NzQ5LWFjZjEtNDMyNC05ZjcwLWZjOGRiYWUzOWNlOSIsImVtYWlsIjoiY3VzdG9tZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NDQ5NTg0NjMsImV4cCI6MTc0NTU2MzI2M30.Koe9BD1-sz1ORadjmPGm4TdH0N7zjqbcl7I6HEvqhFo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"items\": [\n    {\n      \"productId\": \"{{product_id_1}}\",\n      \"quantity\": 2\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/orders/customer/my-orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"customer",
+						"my-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUyZDE4NzQ5LWFjZjEtNDMyNC05ZjcwLWZjOGRiYWUzOWNlOSIsImVtYWlsIjoiY3VzdG9tZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NDQ5NTg0NjMsImV4cCI6MTc0NTU2MzI2M30.Koe9BD1-sz1ORadjmPGm4TdH0N7zjqbcl7I6HEvqhFo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"items\": [\n    {\n      \"productId\": \"{{product_id_1}}\",\n      \"quantity\": 2\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/products/{{product_id_1}}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlmMDc2MjhmLTIyODUtNDQ0OC04NjZkLTg2OWFkYzlkNjgyZSIsImVtYWlsIjoidmVuZG9yQGV4YW1wbGUuY29tIiwicm9sZSI6IlZFTkRPUiIsImlhdCI6MTc0NDk0ODc1NSwiZXhwIjoxNzQ1NTUzNTU1fQ.an5IVClcXQv2fqCtn6nunQWgcHchboj1dC_yqMIs9Yk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"price\": 749.99,\n  \"stock\": 45\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/{{product_id_1}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"{{product_id_1}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
