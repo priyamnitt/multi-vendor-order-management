@@ -1,0 +1,106 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  VENDOR
+  ADMIN
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role     @default(CUSTOMER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relationships
+  products      Product[]      // For vendors
+  orders        Order[]        // For customers
+  vendorOrders  VendorOrder[]  // For vendors
+  
+  @@map("users")
+}
+
+model Product {
+  id        String   @id @default(uuid())
+  name      String
+  price     Float
+  stock     Int
+  category  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Relationships
+  vendor    User   @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+  vendorId  String
+  orderItems OrderItem[]
+
+  @@map("products")
+}
+
+model Order {
+  id           String   @id @default(uuid())
+  totalAmount  Float
+  status       String   @default("pending") // pending, processing, completed, cancelled
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relationships
+  customer     User   @relation(fields: [customerId], references: [id])
+  customerId   String
+  orderItems   OrderItem[]
+  vendorOrders VendorOrder[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id         String   @id @default(uuid())
+  quantity   Int
+  price      Float
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relationships
+  order      Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId    String
+  product    Product  @relation(fields: [productId], references: [id])
+  productId  String
+  vendorOrder VendorOrder? @relation(fields: [vendorOrderId], references: [id])
+  vendorOrderId String?
+
+  @@map("order_items")
+}
+
+model VendorOrder {
+  id          String   @id @default(uuid())
+  totalAmount Float
+  status      String   @default("pending") // pending, processing, completed, cancelled
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relationships
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId     String
+  vendor      User     @relation(fields: [vendorId], references: [id])
+  vendorId    String
+  orderItems  OrderItem[]
+
+  @@map("vendor_orders")
+}
