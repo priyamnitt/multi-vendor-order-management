@@ -51,7 +51,8 @@ A Node.js backend for a multi-vendor order management system where vendors can m
 
 3. Set up environment variables
    ```bash
-   # Update DATABASE_URL in .env with your PostgreSQL connection string
+   # Update DATABASE_URL in .env with your PostgreSQL connection string example is given in .env.example
+   # Refer .env.example file to add more secret info required to run this project
    ```
 
 4. Run database migrations
